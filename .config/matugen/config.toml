@@ -1,0 +1,27 @@
+# ~/.config/matugen/config.toml
+# Matugen reads a wallpaper image and generates colours using the
+# Material You algorithm, then renders each template below.
+
+[config]
+reload_apps = true
+set_wallpaper = false          # swww handles wallpaper — matugen just themes
+
+[templates.hyprland]
+input_path  = "~/.config/matugen/templates/hyprland-colors.conf"
+output_path = "~/.config/hypr/colors.conf"
+
+[templates.waybar]
+input_path  = "~/.config/matugen/templates/waybar-colors.css"
+output_path = "~/.config/waybar/colors.css"
+
+[templates.wofi]
+input_path  = "~/.config/matugen/templates/wofi-colors.css"
+output_path = "~/.config/wofi/colors.css"
+
+[templates.mako]
+input_path  = "~/.config/matugen/templates/mako"
+output_path = "~/.config/mako/config"
+
+[templates.kitty]
+input_path  = "~/.config/matugen/templates/kitty-colors.conf"
+output_path = "~/.config/kitty/colors.conf"

@@ -1,0 +1,67 @@
+/* ─── Window ───────────────────────────────────────────── */
+window {
+    background: rgba(20, 20, 20, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 14px;
+}
+
+/* ─── Search Box ───────────────────────────────────────── */
+#input {
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 10px 16px;
+    margin: 10px;
+    outline: none;
+    font-size: 14px;
+    caret-color: #ffffff;
+}
+
+#input:focus {
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+#scroll {
+    margin: 0 8px 8px;
+}
+
+#inner-box {
+    background: transparent;
+}
+
+#entry {
+    background: transparent;
+    border-radius: 10px;
+    padding: 10px 14px;
+    margin: 2px 0;
+}
+
+#entry:hover {
+    background: rgba(255, 255, 255, 0.08);
+    outline: none;
+}
+
+#entry:selected {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    outline: none;
+}
+
+#text {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+#entry:selected #text {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+#img {
+    display: none;
+}
