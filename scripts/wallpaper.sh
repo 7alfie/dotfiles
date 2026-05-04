@@ -29,7 +29,7 @@ fi
 TRANSITIONS=(fade grow outer wave wipe)
 TRANSITION=${TRANSITIONS[$RANDOM % ${#TRANSITIONS[@]}]}
 
-swww img "$WALLPAPER" \
+awww img "$WALLPAPER" \
     --transition-type "$TRANSITION" \
     --transition-duration 1.2 \
     --transition-fps 60

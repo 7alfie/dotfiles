@@ -1,67 +1,39 @@
-/* ─── Window ───────────────────────────────────────────── */
 window {
-    background: rgba(20, 20, 20, 0.95);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 14px;
-    font-family: "JetBrainsMono Nerd Font", monospace;
-    font-size: 14px;
+    margin: 0px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(30, 30, 30, 0.9); /* Dark Grey with transparency */
+    border-radius: 12px;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 16px;
 }
 
-/* ─── Search Box ───────────────────────────────────────── */
 #input {
-    background: rgba(255, 255, 255, 0.08);
+    margin: 5px;
+    border: none;
     color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    padding: 10px 16px;
-    margin: 10px;
-    outline: none;
-    font-size: 14px;
-    caret-color: #ffffff;
-}
-
-#input:focus {
-    border-color: rgba(255, 255, 255, 0.5);
-    background: rgba(255, 255, 255, 0.12);
-}
-
-#scroll {
-    margin: 0 8px 8px;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 #inner-box {
-    background: transparent;
+    margin: 5px;
+    border: none;
+    background-color: transparent;
 }
 
-#entry {
-    background: transparent;
-    border-radius: 10px;
-    padding: 10px 14px;
-    margin: 2px 0;
-}
-
-#entry:hover {
-    background: rgba(255, 255, 255, 0.08);
-    outline: none;
-}
-
-#entry:selected {
-    background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    outline: none;
+#outer-box {
+    margin: 5px;
+    border: none;
+    background-color: transparent;
 }
 
 #text {
-    color: #ffffff;
-    font-size: 13px;
-    font-weight: 500;
+    margin: 5px;
+    border: none;
+    color: #ffffff; /* Forced White Text */
 }
 
-#entry:selected #text {
-    color: #ffffff;
-    font-weight: 700;
-}
-
-#img {
-    display: none;
+#entry:selected {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    outline: none;
 }

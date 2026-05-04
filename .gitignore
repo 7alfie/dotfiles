@@ -1,0 +1,6 @@
+hypr/colors.conf
+waybar/colors.css
+wofi/colors.css
+kitty/colors.conf
+*.bak
+.DS_Store

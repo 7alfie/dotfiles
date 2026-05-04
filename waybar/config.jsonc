@@ -1,7 +1,4 @@
 {
-    // ╔══════════════════════════════════════════════════════╗
-    // ║           WAYBAR CONFIG — Dynamic via Matugen        ║
-    // ╚══════════════════════════════════════════════════════╝
     "layer": "top",
     "position": "top",
     "height": 38,
@@ -12,48 +9,19 @@
     "exclusive": true,
     "passthrough": false,
 
-    "modules-left": [
-        "hyprland/workspaces",
-        "hyprland/window"
-    ],
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["cpu", "memory", "network", "bluetooth", "pulseaudio", "battery", "tray"],
 
-    "modules-center": [
-        "clock"
-    ],
-
-    "modules-right": [
-        "cpu",
-        "memory",
-        "network",
-        "pulseaudio",
-        "battery",
-        "tray",
-        "custom/power"
-    ],
-
-    // ─── Left ──────────────────────────────────────────────
     "hyprland/workspaces": {
         "format": "{icon}",
         "on-click": "activate",
         "on-scroll-up": "hyprctl dispatch workspace e-1",
         "on-scroll-down": "hyprctl dispatch workspace e+1",
         "format-icons": {
-            "1": "1",
-            "2": "2",
-            "3": "3",
-            "4": "4",
-            "5": "5",
-            "6": "6",
-            "7": "7",
-            "8": "8",
-            "9": "9",
-            "urgent": "",
-            "active": "",
-            "default": ""
+            "urgent": "", "active": "", "default": ""
         },
-        "persistent-workspaces": {
-            "*": 5
-        }
+        "persistent-workspaces": { "*": 5 }
     },
 
     "hyprland/window": {
@@ -69,21 +37,13 @@
         }
     },
 
-    // ─── Center ────────────────────────────────────────────
     "clock": {
         "interval": 1,
         "format": "  {:%H:%M}",
         "format-alt": "  {:%A, %d %B %Y}",
-        "tooltip-format": "<tt><small>{calendar}</small></tt>",
-        "calendar": {
-            "mode": "year",
-            "mode-mon-col": 3,
-            "on-scroll": 1,
-            "on-click-right": "mode"
-        }
+        "tooltip-format": "<tt><small>{calendar}</small></tt>"
     },
 
-    // ─── Right ─────────────────────────────────────────────
     "cpu": {
         "interval": 2,
         "format": "󰻠  {usage}%",
@@ -93,7 +53,7 @@
     "memory": {
         "interval": 5,
         "format": "  {used:0.1f}G",
-        "tooltip-format": "Used: {used:0.1f}GB / {total:0.1f}GB\nAvailable: {avail:0.1f}GB"
+        "tooltip-format": "Used: {used:0.1f}GB / {total:0.1f}GB"
     },
 
     "network": {
@@ -101,8 +61,16 @@
         "format-wifi": "󰤨  {essid}",
         "format-ethernet": "󰈀  {ifname}",
         "format-disconnected": "󰤭  Offline",
-        "tooltip-format": "{ifname} — {ipaddr}\n↓ {bandwidthDownBytes}  ↑ {bandwidthUpBytes}",
+        "tooltip-format": "{ifname} — {ipaddr}",
         "on-click": "nm-connection-editor"
+    },
+
+    "bluetooth": {
+        "format": "󰂯  {status}",
+        "format-connected": "󰂱  {device_alias}",
+        "format-off": "󰂲",
+        "tooltip-format": "{controller_alias} — {controller_address}",
+        "on-click": "blueman-manager"
     },
 
     "pulseaudio": {
@@ -110,38 +78,19 @@
         "format-muted": "󰝟  Muted",
         "format-icons": {
             "headphone": "󰋋",
-            "hands-free": "󰋋",
-            "headset": "󰋋",
-            "phone": "",
-            "portable": "",
-            "car": "",
             "default": ["󰕿", "󰖀", "󰕾"]
         },
-        "on-click": "pavucontrol",
-        "tooltip-format": "{desc} — {volume}%"
+        "on-click": "pavucontrol"
     },
 
     "battery": {
         "interval": 30,
-        "states": {
-            "warning": 30,
-            "critical": 15
-        },
+        "states": { "warning": 30, "critical": 15 },
         "format": "{icon}  {capacity}%",
         "format-charging": "󰂄  {capacity}%",
         "format-plugged": "󰚥  {capacity}%",
-        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-        "tooltip-format": "{timeTo} — {power:.1f}W"
+        "format-icons": ["󰂎","󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"]
     },
 
-    "tray": {
-        "spacing": 8,
-        "icon-size": 16
-    },
-
-    "custom/power": {
-        "format": "⏻",
-        "tooltip": false,
-        "on-click": "wofi --show drun --prompt 'Power...' || systemctl poweroff"
-    }
+    "tray": { "spacing": 8, "icon-size": 16 }
 }

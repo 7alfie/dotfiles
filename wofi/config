@@ -1,8 +1,0 @@
-width=500
-height=400
-prompt=Search...
-hide_scroll=true
-show=drun
-allow_markup=true
-no_actions=true
-stylesheet=/home/alfie/.config/wofi/style.css
